@@ -7,7 +7,7 @@ Welcome to **Chatty**, an elegant, user-friendly AI chatbot built using **Stream
 <div align="center">
   <img src="https://img.shields.io/badge/Built%20With-Streamlit-blue?style=for-the-badge" alt="Streamlit Badge"/>
   <img src="https://img.shields.io/badge/Model-Gemini%20-yellow?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Made%20By-Himanshu%20Singh-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Made%20By-Himanshu%20Singh-green?style=for-the-badge"/>
 </div>
 
 ---
