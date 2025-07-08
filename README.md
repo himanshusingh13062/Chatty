@@ -22,12 +22,6 @@ Welcome to **Chatty**, an elegant, user-friendly AI chatbot built using **Stream
 
 ---
 
-## 📸 Preview
-
-<!-- Add an actual screenshot of your app here -->
-![Chatty Screenshot](https://your-screenshot-link.png)
-
----
 
 ## 🚀 Getting Started
 
