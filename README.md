@@ -1,5 +1,3 @@
-# Chatty
-a simple chatbot 
 
 
 # 🤖 Chatty - Your Personal AI Assistant
