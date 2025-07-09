@@ -4,7 +4,6 @@ import os
 import time
 from dotenv import load_dotenv
 
-# Load API key from .env file
 load_dotenv()
 API_KEY = os.getenv("GEMINI_API_KEY")
 
@@ -28,7 +27,6 @@ def get_chatty_response(prompt, history):
 
     data = {"contents": contents}
     
-    # Try a couple times if it fails
     for _ in range(2):
         try:
             response = requests.post(API_URL, headers=HEADERS, data=json.dumps(data))
