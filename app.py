@@ -1,7 +1,6 @@
 import streamlit as st
 from chatbot import get_chatty_response
 
-# Page config with wider layout
 st.set_page_config(
     page_title="Chatty AI Assistant", 
     page_icon="🤖", 
@@ -9,7 +8,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Simple CSS styling
 st.markdown("""
 <style>
     /* Hide defaults and setup */
@@ -89,7 +87,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Beautiful header with animation
 st.markdown("""
 <div class="header-container">
     <div class="header-title">🤖 Chatty</div>
@@ -97,37 +94,30 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Initialize session state
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
-# Show chat history
 for i in range(0, len(st.session_state.chat_history), 2):
     # User message
     with st.chat_message("user", avatar="👤"):
         st.write(st.session_state.chat_history[i])
     
-    # Assistant message
     if i + 1 < len(st.session_state.chat_history):
         with st.chat_message("assistant", avatar="🤖"):
             st.write(st.session_state.chat_history[i + 1])
 
-# Chat input
 prompt = st.chat_input("Type your message here...", key="chat_input")
 
 if prompt:
     st.session_state.chat_history.append(prompt)
     
-    # Show user message immediately
     with st.chat_message("user", avatar="👤"):
         st.write(prompt)
     
-    # Get and show assistant response
     with st.chat_message("assistant", avatar="🤖"):
         with st.spinner("Thinking..."):
             response = get_chatty_response(prompt, st.session_state.chat_history)
             st.write(response)
             st.session_state.chat_history.append(response)
 
-# Add some spacing at the bottom
 st.markdown("<br><br>", unsafe_allow_html=True)
